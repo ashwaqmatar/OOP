@@ -282,7 +282,14 @@ public class Polynom implements Polynom_able{
 		}
 		return nP;
 	}
-
+/**
+ * this method return the area in domain 
+ * @param x0 = this the start in the domain 
+ * @param x1= this the end in the domain 
+ * @param eps= אחוז קירוב  
+ * 
+ * 
+ */
 	@Override
 	public double area(double x0, double x1, double eps) {
 		// TODO Auto-generated method stub
