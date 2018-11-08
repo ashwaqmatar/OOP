@@ -2,14 +2,10 @@ package Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.File;
-
-import org.junit.internal.runners.statements.Fail;
 import org.junit.jupiter.api.Test;
 
-import myMath.Polynom;
-import myMath.Polynom_able;
 import myMath.Monom;
+import myMath.Polynom;
 
 class PolynomTest {
 
@@ -153,7 +149,7 @@ class PolynomTest {
 		p1.add(new Monom(-6,1));
 		p1.add(new Monom(5,0));
 	
-		double root=p1.root(0, 100, 0.01);
+		double root=p1.root(0, 5, 0.01);
 		if(Math.abs(p1.f(root))>=0.01)
 			fail("Eror , uncorrect Root");
 	}
