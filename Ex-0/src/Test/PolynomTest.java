@@ -148,7 +148,7 @@ class PolynomTest {
 		p1.add(new Monom(1,2));
 		p1.add(new Monom(-6,1));
 		p1.add(new Monom(5,0));
-	
+
 		double root=p1.root(0, 5, 0.01);
 		if(Math.abs(p1.f(root))>=0.01)
 			fail("Eror , uncorrect Root");
@@ -169,17 +169,17 @@ class PolynomTest {
 
 	@Test
 	void testArea() {
-		/*Polynom p1=new Polynom();
+		Polynom p1=new Polynom();
 		p1.add(new Monom(1,2));
-		p1.add(new Monom(6,1));
+		p1.add(new Monom(-6,1));
 		p1.add(new Monom(5,0));
-		        double expected = -32/3;
-				if(expected!=(p1.area(-5, -1, 0.00))) {
-					fail("Not yet implemented");
-					
-*/
-		    }
+		double expected = -10.666666000000436;
+		if(expected!=(p1.area(1, 5, 0.001))) {
+			fail("Not yet implemented");
+
+		}
 	}
+}
 
 
 
