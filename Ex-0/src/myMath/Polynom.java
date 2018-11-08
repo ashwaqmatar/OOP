@@ -289,6 +289,7 @@ public class Polynom implements Polynom_able{
  * @param eps= אחוז קירוב  
  * 
  * 
+ * 
  */
 	@Override
 	public double area(double x0, double x1, double eps) {
