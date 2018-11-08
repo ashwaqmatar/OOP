@@ -12,8 +12,7 @@ import myMath.Monom;
  * 2. Finding a numerical value between two values (currently support root only f(x)=0).
  * 3. Derivative
  * 
- * 
- * @author ahmad
+ * @author ahmad 
  * @author ashwaq 
  *
  */
@@ -287,11 +286,13 @@ public class Polynom implements Polynom_able{
 	@Override
 	public double area(double x0, double x1, double eps) {
 		// TODO Auto-generated method stub
-		double t =(x1-x0)/eps;
+
+		
 		double S=0;
 
-		for (double i = 0; i < t; i++) {
-			S+=t*this.f((x0 + i*t));
+		while(x0<=x1) {
+			S+=(this.f(x0)*eps);
+			x0+=eps;
 		}
 
 		return S;
