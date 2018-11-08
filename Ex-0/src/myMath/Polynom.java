@@ -75,6 +75,7 @@ public class Polynom implements Polynom_able{
 	}
 	/**
 	 * This function computes the value of this polynom at f(x), as a sum of monoms.
+	 * @param x this Strig  is a variable for polynom
 	 */
 	@Override
 	public double f(double x) {
