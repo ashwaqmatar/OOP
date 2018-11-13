@@ -52,17 +52,17 @@ class PolynomTest {
 		p1.add(new Monom(7, 1));
 		p1.add(new Monom(10, 0));
 		Polynom p2=new Polynom();
-		p1.add(new Monom(4, 2));
-		p1.add(new Monom(2, 1));
-		p1.add(new Monom(2, 0));
+		p2.add(new Monom(4, 2));
+		p2.add(new Monom(2, 1));
+		p2.add(new Monom(2, 0));
 		p1.add(p2);
 		Polynom s= new Polynom();
-		p1.add(new Monom(2, 3));
-		p1.add(new Monom(10, 2));
-		p1.add(new Monom(9, 1));
-		p1.add(new Monom(12, 0));
+		s.add(new Monom(2, 3));
+		s.add(new Monom(10, 2));
+		s.add(new Monom(9, 1));
+		s.add(new Monom(12, 0));
 
-		if(!s.equals(p2))
+		if(!s.equals(p1))
 			fail("Not yet implemented");
 	}
 
@@ -85,41 +85,45 @@ class PolynomTest {
 	@Test
 	void testSubstractPolynom_able() {
 		Polynom p1=new Polynom();
-		p1.add(new Monom(2, 3));
-		p1.add(new Monom(6, 2));
-		p1.add(new Monom(7, 1));
-		p1.add(new Monom(10, 0));
-		Polynom p2=new Polynom();
-		p1.add(new Monom(4, 2));
+		p1.add(new Monom(2, 2));
+	//	p1.add(new Monom(6, 2));
 		p1.add(new Monom(2, 1));
 		p1.add(new Monom(2, 0));
+		Polynom p2=new Polynom();
+		p2.add(new Monom(1, 2));
+		p2.add(new Monom(1, 1));
+		p2.add(new Monom(1, 0));
 		p1.substract(p2);
-		Polynom s= new Polynom();
-		p1.add(new Monom(2, 3));
-		p1.add(new Monom(2, 2));
-		p1.add(new Monom(5, 1));
-		p1.add(new Monom(8, 0));
+		System.out.println( p1);
 
-		if(!s.equals(p2))
+		Polynom s= new Polynom();
+	//	s.add(new Monom(-2, 3));
+		s.add(new Monom(1, 2));
+		s.add(new Monom(1, 1));
+		s.add(new Monom(1, 0));
+
+		if(!s.equals(p1))
 			fail("Not yet implemented");
 	}
 
 	@Test
 	void testMultiply() {
 		Polynom p1=new Polynom();
-		p1.add(new Monom(2, 3));
+		p1.add(new Monom(2, 1));
 		p1.add(new Monom(10, 0));
 		Polynom p2=new Polynom();
-		p1.add(new Monom(4, 2));
-		p1.add(new Monom(2, 0));
-		p1.add(p2);
-		Polynom s= new Polynom();
-		p1.add(new Monom(8, 5));
-		p1.add(new Monom(6, 3));
-		p1.add(new Monom(5, 1));
-		p1.add(new Monom(20, 0));
+		p2.add(new Monom(4, 1));
+		p2.add(new Monom(2, 0));
+		p1.multiply(p2);
+	//	System.out.println( p1);
 
-		if(!s.equals(p2))
+		Polynom s= new Polynom();
+		s.add(new Monom(8, 2));
+		s.add(new Monom(44, 1));
+		//s.add(new Monom(40, 2));
+		s.add(new Monom(20, 0));
+
+		if(!s.equals(p1))
 			fail("Not yet implemented");
 	}
 
